@@ -30,7 +30,7 @@ async function sendMessage(chatId: string, text: string): Promise<void> {
     console.error("Error sending message to Telegram:", error);
   }
 }
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     console.log(body);
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     if (message) {
       const chatId = message.chat.id; // Extract chat ID from the message
-      const userId = message.from.id; // Extract user ID
+      // const userId = message.from.id; // Extract user ID
 
       // Here, save the chatId to a database
       // Example using MongoDB (you can store it in a database of your choice)

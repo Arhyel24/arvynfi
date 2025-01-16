@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
               To communicate with you about your account and transactions.
             </li>
             <li className="mb-2">
-              To improve our platform's features and performance.
+              To improve features and performance of our platform.
             </li>
             <li>To comply with legal obligations and prevent fraud.</li>
           </ul>
@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
           </h2>
           <p className=" leading-7">
             We may update this Privacy Policy from time to time. When we do, we
-            will post the updated policy on this page with a new "Last Updated"
+            will post the updated policy on this page with a new Last Updated
             date. We encourage you to review this Privacy Policy periodically to
             stay informed about how we protect your information.
           </p>

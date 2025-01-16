@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { NavBar } from "./_components/navbar";
 import { Header } from "./_components/header";
 import { ChooseUs } from "./_components/why-choose-us";
