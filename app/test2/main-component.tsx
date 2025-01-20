@@ -9,7 +9,7 @@ import Wallet from "./_components/wallet";
 import History from "./_components/history";
 
 // AppKit imports
-// import ConnectButton from "./_components/appkit/connect-button";
+import ConnectButton from "./_components/appkit/connect-button";
 import { createAppKit } from "@reown/appkit/react";
 import { SolanaAdapter } from "@reown/appkit-adapter-solana/react";
 import { solana, solanaTestnet, solanaDevnet } from "@reown/appkit/networks";
@@ -23,7 +23,7 @@ const solanaWeb3JsAdapter = new SolanaAdapter({
 });
 
 // 1. Get projectId from https://cloud.reown.com
-const projectId = "YOUR_PROJECT_ID";
+const projectId = process.env.YOUR_PROJECT_ID!;
 
 const metadata = {
   name: "ArvynFi",
@@ -67,38 +67,38 @@ export default function Navigation() {
   };
 
   return (
-      <div className="flex flex-col justify-between h-screen max-w-[480px] w-full mx-auto">
-        <div className="w-full p-3 flex justify-between items-center">
-          <TbExchange size={25} className="text-teal-600" />
-          {/* <ConnectButton />*/}
-        </div>
-        <Render />
-        <div className="flex justify-between w-full p-4 dark:bg-gray-800">
-          <i
-            className={`text-teal-500 px-4 ${
-              activePage === "wallet" ? "text-white" : ""
-            }`}
-            onClick={() => handleNavigation("wallet")}
-          >
-            <FaWallet size={30} />
-          </i>
-          <i
-            className={`text-teal-500 px-4 ${
-              activePage === "swap" ? "text-white" : ""
-            }`}
-            onClick={() => handleNavigation("swap")}
-          >
-            <RiTokenSwapLine size={30} />
-          </i>
-          <i
-            className={`text-teal-500 px-4 ${
-              activePage === "history" ? "text-white" : ""
-            }`}
-            onClick={() => handleNavigation("history")}
-          >
-            <FaHistory size={30} />
-          </i>
-        </div>
+    <div className="flex flex-col justify-between h-screen max-w-[480px] w-full mx-auto">
+      <div className="w-full p-3 flex justify-between items-center">
+        <TbExchange size={25} className="text-teal-600" />
+        <ConnectButton />
       </div>
+      <Render />
+      <div className="flex justify-between w-full p-4 dark:bg-gray-800">
+        <i
+          className={`text-teal-500 px-4 ${
+            activePage === "wallet" ? "text-white" : ""
+          }`}
+          onClick={() => handleNavigation("wallet")}
+        >
+          <FaWallet size={25} />
+        </i>
+        <i
+          className={`text-teal-500 px-4 ${
+            activePage === "swap" ? "text-white" : ""
+          }`}
+          onClick={() => handleNavigation("swap")}
+        >
+          <RiTokenSwapLine size={25} />
+        </i>
+        <i
+          className={`text-teal-500 px-4 ${
+            activePage === "history" ? "text-white" : ""
+          }`}
+          onClick={() => handleNavigation("history")}
+        >
+          <FaHistory size={25} />
+        </i>
+      </div>
+    </div>
   );
 }
