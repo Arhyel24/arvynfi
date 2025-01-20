@@ -13,9 +13,3 @@
     --foreground: #ededed;
   }
 }
-
-body {
-  background: url("/GYcxEwYa0AAiw1z.jpg") no-repeat top fixed;
-  font-family: Arial, Helvetica, sans-serif;
-  backdrop-filter: blur(10px);
-}

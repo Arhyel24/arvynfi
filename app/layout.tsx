@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} antialiased min-h-screen`}>
+      <body
+        className={`${poppins.variable} antialiased bg-white dark:text-white min-h-screen flex flex-col justify-between dark:bg-slate-900`}
+      >
         {children}
       </body>
     </html>
