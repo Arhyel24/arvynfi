@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IoEllipsisHorizontalCircleSharp } from "react-icons/io5";
 
@@ -25,7 +26,9 @@ export default function Wallet() {
       <div className="mt-5 w-full px-4">
         <div className="bg-gray-800 p-4 rounded-lg flex justify-between items-center mb-4">
           <div className="flex items-center">
-            <img
+            <Image
+              height={10}
+              width={10}
               src="https://placehold.co/40x40?text=Solana"
               alt="Solana logo"
               className="w-10 h-10 rounded-full mr-4"
@@ -45,7 +48,9 @@ export default function Wallet() {
         </div>
         <div className="bg-gray-800 p-4 rounded-lg flex justify-between items-center mb-4">
           <div className="flex items-center">
-            <img
+            <Image
+              height={10}
+              width={10}
               src="https://placehold.co/40x40?text=KIN"
               alt="KIN logo"
               className="w-10 h-10 rounded-full mr-4"
@@ -65,7 +70,9 @@ export default function Wallet() {
         </div>
         <div className="bg-gray-800 p-4 rounded-lg flex justify-between items-center mb-4">
           <div className="flex items-center">
-            <img
+            <Image
+              height={10}
+              width={10}
               src="https://placehold.co/40x40?text=USD+Coin"
               alt="USD Coin logo"
               className="w-10 h-10 rounded-full mr-4"

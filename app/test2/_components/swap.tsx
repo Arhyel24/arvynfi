@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { FaBackspace } from "react-icons/fa";
 
@@ -39,7 +40,9 @@ export default function Swap() {
         <div className="w-full dark:bg-gray-800 p-4 rounded-lg space-y-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <img
+              <Image
+                height={8}
+                width={8}
                 src="https://placehold.co/32x32"
                 alt="USD Coin logo"
                 className="w-8 h-8"
@@ -62,7 +65,9 @@ export default function Swap() {
         <div className="w-full bg-gray-800 p-4 rounded-lg space-y-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <img
+              <Image
+                height={8}
+                width={8}
                 src="https://placehold.co/32x32"
                 alt="Solana logo"
                 className="w-8 h-8"
