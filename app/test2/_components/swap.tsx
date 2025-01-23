@@ -44,7 +44,7 @@ export default function Swap() {
   const { address, isConnected } = useAppKitAccount();
   const { walletProvider } = useAppKitProvider<Provider>("solana");
 
-  const getQuote = async (amount: Number) => {
+  const getQuote = async (amount: number) => {
     const quoteResponse = await (
       await fetch(
         `https://quote-api.jup.ag/v6/quote?inputMint=${selectedToken.mint}\
@@ -79,7 +79,7 @@ export default function Swap() {
 
     // deserialize the transaction
     const swapTransactionBuf = Buffer.from(swapTransaction, "base64");
-    var transaction = VersionedTransaction.deserialize(swapTransactionBuf);
+    const transaction = VersionedTransaction.deserialize(swapTransactionBuf);
 
     const txid = await walletProvider.signAndSendTransaction(transaction);
 

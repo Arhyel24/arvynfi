@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { FaWallet } from "react-icons/fa";
 import { RiTokenSwapLine } from "react-icons/ri";
 import { TbExchange } from "react-icons/tb";
