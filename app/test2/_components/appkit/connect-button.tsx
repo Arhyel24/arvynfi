@@ -1,14 +1,19 @@
-import { useAppKit } from "@reown/appkit/react";
+import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
+import WalletUI from "./wallet-ui";
 
 export default function ConnectButton() {
   // 4. Use modal hook
   const { open } = useAppKit();
+  const { address, isConnected } = useAppKitAccount();
 
   return (
     <>
-      <button onClick={() => open()}>Open Connect Modal</button>
-      <button onClick={() => open({ view: "Networks" })}>
-        Open Network Modal
+      <button onClick={() => open()} className="text-white">
+        {isConnected ? (
+          <WalletUI address={address as string} />
+        ) : (
+          "Connect wallet"
+        )}
       </button>
     </>
   );

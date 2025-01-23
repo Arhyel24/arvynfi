@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ContextProvider from "@/provider/appkit-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-white dark:text-white min-h-screen flex flex-col justify-between dark:bg-slate-900`}
       >
-        {children}
+        <ContextProvider>{children}</ContextProvider>
       </body>
     </html>
   );
