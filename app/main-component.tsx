@@ -26,7 +26,7 @@ export default function Navigation() {
   const activePage = searchParams.get("page") || "wallet";
 
   const handleNavigation = (page: string) => {
-    router.push(`/test2/?page=${page}`);
+    router.push(`?page=${page}`);
   };
 
   const Render = () => {
