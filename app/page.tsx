@@ -1,14 +1,12 @@
-import { NavBar } from "./_components/navbar";
-import { Header } from "./_components/header";
-import { ChooseUs } from "./_components/why-choose-us";
+"use client";
 
-export default function Home() {
+import { Suspense } from "react";
+import Navigation from "./main-component";
+
+export default function Page() {
   return (
-    <>
-      <NavBar />
-      <div className="h-20"></div>
-      <Header />
-      <ChooseUs />
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Navigation />
+    </Suspense>
   );
 }

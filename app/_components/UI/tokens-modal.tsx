@@ -2,6 +2,7 @@ import myImageLoader from "@/actions/image/loader";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { TokenInfo } from "../../main-component";
+import { CACHE_EXPIRATION_TIME, TokenArray } from "../wallet";
 
 export default function VerifiedTokensModal({
   isOpen,
